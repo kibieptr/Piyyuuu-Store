@@ -12,6 +12,7 @@
     "bcrypt": "^5.1.1",
     "firebase": "^10.11.1",
     "next": "14.0.3",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.76.0"

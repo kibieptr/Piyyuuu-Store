@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app'
 import { Lato } from 'next/font/google'
+import Head from 'next/head';
 
 const lato = Lato({ 
   subsets: ['latin'],
@@ -12,6 +13,9 @@ const lato = Lato({
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
+      <Head>
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+      </Head>
           <Navbar />
           <div className={lato.className}>
             <Component {...pageProps} />

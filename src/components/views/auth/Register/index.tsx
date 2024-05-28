@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./Register.module.scss";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
@@ -44,16 +43,36 @@ const RegisterView = () => {
 
   return (
     <AuthLayout
-      title="Register"
+      title="Register Page"
       error={error}
       link="/auth/login"
       linkText="Have an account? Sign in "
     >
       <form onSubmit={handleSubmit}>
-        <Input label="Email" name="email" type="email" />
-        <Input label="Fullname" name="fullname" type="text" />
-        <Input label="Phone" name="phone" type="number" />
-        <Input label="Password" name="password" type="password" />
+        <Input
+          label="Email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+        />
+        <Input
+          label="Fullname"
+          name="fullname"
+          type="text"
+          placeholder="Enter your fullname"
+        />
+        <Input
+          label="Phone"
+          name="phone"
+          type="number"
+          placeholder="Enter your phone number"
+        />
+        <Input
+          label="Password"
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+        />
         <Button type="submit" className={styles.register__button}>
           {isLoading ? "Loading..." : "Register"}
         </Button>

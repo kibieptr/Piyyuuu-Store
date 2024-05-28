@@ -2,12 +2,15 @@
   &__button {
     width: 100%;
   }
+
   &__divider {
     margin-top: 15px;
     margin-bottom: 15px;
   }
+
   &__other {
     width: 100%;
+
     &__button {
       width: 100%;
       border-radius: 7px;
@@ -15,8 +18,39 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
+
       i {
         font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__divider {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &__other__button {
+      gap: 3px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__divider {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    &__other__button {
+      gap: 2px;
+
+      i {
+        font-size: 16px;
       }
     }
   }

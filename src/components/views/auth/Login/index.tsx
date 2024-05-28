@@ -44,13 +44,13 @@ const LoginView = () => {
 
   return (
     <AuthLayout
-      title="login"
+      title="Login Page"
       link="/auth/register"
       linkText="Don't have a account ? Sign up "
     >
       <form onSubmit={handleSubmit}>
-        <Input label="Email" name="email" type="email" />
-        <Input label="Password" name="password" type="password" />
+        <Input label="Email" name="email" type="email" placeholder="Enter your email" />
+        <Input label="Password" name="password" type="password" placeholder="Enter your password" />
         <Button
           type="submit"
           variant="primary"

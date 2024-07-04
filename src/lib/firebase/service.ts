@@ -112,7 +112,13 @@ export async function signIn(email: string) {
 }
 
 export async function loginWithGoogle(
-  data: { email: string; role?: string },
+  data: {
+    email: string;
+    role?: string;
+    created_at?: Date;
+    updated_at?: Date;
+    password?: string;
+  },
   callback: Function
 ) {
   const user = await retrieveDataByField("users", "email", data.email);
@@ -120,9 +126,12 @@ export async function loginWithGoogle(
   if (user.length > 0) {
     callback(user[0]);
   } else {
-    (data.role = "member"),
-      await addDoc(collection(firestore, "users"), data).then(() => {
-        callback(data);
-      });
+    data.role = "member";
+    data.created_at = new Date();
+    data.updated_at = new Date();
+    data.password = "";
+    await addDoc(collection(firestore, "users"), data).then(() => {
+      callback(data);
+    });
   }
 }

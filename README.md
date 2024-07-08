@@ -17,14 +17,9 @@ Piyyuu-Store is an e-commerce web application built with Next.js and TypeScript.
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-
-Tentu! Berikut readme lengkap untuk fitur-fitur yang Anda miliki:
-
+  
 ---
-
-# Fitur Aplikasi
-
-Berikut adalah daftar fitur yang tersedia dalam aplikasi ini:
+# Features
 
 | Fitur                  | Status                 |
 |------------------------|------------------------|
@@ -34,22 +29,22 @@ Berikut adalah daftar fitur yang tersedia dalam aplikasi ini:
 | Shopping Cart          | ⬜ COMING SOON         |
 | Responsive Design      | ⬜ COMING SOON         |
 
-## Deskripsi Fitur
+## Feature Description
 
 ### User Authentication
-Fitur ini memungkinkan pengguna untuk melakukan proses login dan registrasi ke dalam aplikasi.
+This feature allows users to login and register into the application.
 
 ### User Management
-Fitur ini memungkinkan administrator atau pengguna dengan hak akses yang sesuai untuk mengelola pengguna yang ada, termasuk kemampuan untuk memperbarui informasi pengguna atau menghapus pengguna yang tidak diperlukan lagi.
+This feature allows administrators or users with appropriate access rights to manage existing users, including the ability to update user information or delete users who are no longer needed.
 
 ### Product Management (Coming Soon)
-Fitur ini akan segera tersedia dan memungkinkan untuk mengelola produk yang ada di dalam aplikasi.
+This feature will be available soon and allows to manage existing products within the app.
 
 ### Shopping Cart (Coming Soon)
-Fitur ini akan segera tersedia dan memungkinkan untuk menambahkan produk ke keranjang belanja di aplikasi.
+This feature will be available soon and allows to add products to the shopping cart in the app.
 
 ### Responsive Design (Coming Soon)
-Fitur ini akan segera tersedia dan memastikan bahwa tampilan aplikasi responsif, sehingga dapat diakses dan digunakan dengan baik baik di perangkat desktop maupun mobile.
+This feature will be available soon and ensures that the app display is responsive, so that it can be accessed and used properly on both desktop and mobile devices.
 
 ---
 

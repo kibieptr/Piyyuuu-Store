@@ -18,13 +18,15 @@ Piyyuu-Store is an e-commerce web application built with Next.js and TypeScript.
 - [License](#license)
 - [Contact](#contact)
 
-## Features
+# Features
 
-- **User Authentication**: LOGIN & REGISTER
-- **Product Management**: COMING SOON
-- **Shopping Cart**: COMING SOON
-- **Responsive Design**: COMING SOON
-- **Search Functionality**: COMING SOON
+| Feature               | Status       |
+|-----------------------|--------------|
+| User Authentication   | [✔] LOGIN & REGISTER |
+| User Management       | [✔] UPDATE & DELETE |
+| Product Management    | [ ] COMING SOON |
+| Shopping Cart         | [ ] COMING SOON |
+| Responsive Design     | [ ] COMING SOON |
 
 ## Tech Stack
 

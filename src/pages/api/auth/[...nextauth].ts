@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
+import jwt from "jsonwebtoken";
 
 const authOptions: NextAuthOptions = {
   session: {
@@ -37,54 +38,57 @@ const authOptions: NextAuthOptions = {
       },
     }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID || '',
-      clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET || '',
-    })
+      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET || "",
+    }),
   ],
-  callbacks:{
-    async jwt({ token , account , profile , user}: any) {
-        if (account?.provider === "credentials") {
-            token.email = user.email;
-            token.fullname = user.fullname;
-            token.phone = user.phone;
-            token.role = user.role;
-        }
+  callbacks: {
+    async jwt({ token, account, profile, user }: any) {
+      if (account?.provider === "credentials") {
+        token.email = user.email;
+        token.fullname = user.fullname;
+        token.phone = user.phone;
+        token.role = user.role;
+      }
 
-        if(account?.provider === "google") {
-          const data = {
-            fullname: user.name,
-            email: user.email,
-            type: 'google',
-          };
+      if (account?.provider === "google") {
+        const data = {
+          fullname: user.name,
+          email: user.email,
+          type: "google",
+        };
 
-          await loginWithGoogle(
-            data,
-            (data: any) => {
-              token.email = data.email;
-              token.fullname = data.fullname;
-              token.role = data.role;
-            }
-          );
-        }
+        await loginWithGoogle(data, (data: any) => {
+          token.email = data.email;
+          token.fullname = data.fullname;
+          token.role = data.role;
+        });
+      }
 
-        return token;
+      return token;
     },
-    async session({ session , token }: any) {
-        if('email' in token) {
-            session.user.email = token.email;
-        }
-        if('fullname' in token) {
-            session.user.fullname = token.fullname;
-        }
-        if('phone' in token) {
-            session.user.phone = token.phone;
-        }
-        if('role' in token) {
-            session.user.role = token.role;
-        }
+    async session({ session, token }: any) {
+      if ("email" in token) {
+        session.user.email = token.email;
+      }
+      if ("fullname" in token) {
+        session.user.fullname = token.fullname;
+      }
+      if ("phone" in token) {
+        session.user.phone = token.phone;
+      }
+      if ("role" in token) {
+        session.user.role = token.role;
+      }
 
-        return session;
-    }
+      const accessToken = jwt.sign(token, process.env.NEXTAUTH_SECRET || "", {
+        algorithm: "HS256",
+      });
+
+      session.accessToken = accessToken;
+
+      return session;
+    },
   },
   pages: {
     signIn: "/auth/login",

@@ -5,6 +5,7 @@ import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 import authServices from "@/services/auth/services";
 import AuthLayout from "@/components/layouts/AuthLayout";
+import { signIn } from "next-auth/react";
 
 const RegisterView = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -74,7 +75,7 @@ const RegisterView = () => {
           placeholder="Enter your password"
         />
         <Button type="submit" className={styles.register__button}>
-          {isLoading ? "Loading..." : "Register"}
+          {isLoading ? "Loading..." : "Create Account"}
         </Button>
       </form>
     </AuthLayout>

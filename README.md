@@ -1,13 +1,13 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Lynnxha">
-    <img src="https://static.vecteezy.com/system/resources/thumbnails/026/827/177/small_2x/store-isolated-with-white-background-png.png" alt="Logo" width="100" height="100">
+    <img src="https://telegra.ph/file/971d8824a9844020d054e.png" alt="Logo" width="100" height="100">
   </a>
 
-  <h3 align="center">Piyyuu Store</h3>
+  <h3 align="center">Piyyuuu Store</h3>
 </p>
 
-Piyyuu-Store is an e-commerce web application built with Next.js and TypeScript. This project is designed to provide a seamless shopping experience with modern web technologies, ensuring high performance and scalability.
+Piyyuuu Store is an e-commerce web application built with Next.js and TypeScript. This project is designed to provide a seamless shopping experience with modern web technologies, ensuring high performance and scalability.
 
 ## Table of Contents
 
@@ -38,8 +38,8 @@ Piyyuu-Store is an e-commerce web application built with Next.js and TypeScript.
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/Lynnxha/Piyyuu-Store.git
-   cd Piyyuu-Store
+   git clone https://github.com/kibieptr/Piyyuuu-Store.git
+   cd Piyyuuu-Store
    ```
 
 2. **Install dependencies**:

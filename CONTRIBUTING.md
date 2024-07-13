@@ -1,92 +1,127 @@
-Sure, here's a draft for your `CONTRIBUTING.md` file:
+Sure, here's the revised `CONTRIBUTING.md` tailored for your Piyyuu-Store repository:
 
----
+````markdown
+# Contributing to Piyyuuu Store
 
-# Contributing to Piyyuu-Store
-
-Thank you for your interest in contributing to Piyyuu-Store! We welcome contributions in the form of bug reports, feature requests, and pull requests.
+Thank you for considering contributing to Piyyuuu Store! We appreciate your support. Following these guidelines ensures that your contributions are effectively integrated into the project.
 
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
-- [How to Contribute](#how-to-contribute)
-- [Reporting Issues](#reporting-issues)
-- [Submitting Pull Requests](#submitting-pull-requests)
+- [How Can I Contribute?](#how-can-i-contribute)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Submitting Pull Requests](#submitting-pull-requests)
 - [Style Guides](#style-guides)
-- [Commit Messages](#commit-messages)
+  - [Git Commit Messages](#git-commit-messages)
+  - [JavaScript/TypeScript Style Guide](#javascripttypescript-style-guide)
+  - [CSS/SCSS Style Guide](#cssscss-style-guide)
+- [Additional Notes](#additional-notes)
+  - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
 
 ## Code of Conduct
 
-Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for everyone.
+This project and everyone participating in it are governed by the [Piyyuuu Store Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to uphold this code. Please report unacceptable behavior to [kibieptrid@gmail.com](mailto:kibieptrid@gmail.com).
 
-## How to Contribute
+## How Can I Contribute?
 
-### Reporting Issues
+### Reporting Bugs
 
-If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/your-username/Piyyuu-Store/issues). Before opening a new issue, please check if the issue already exists.
+To report a bug:
+
+1. Ensure the bug isn't already reported by checking the [issues list](https://github.com/kibieptr/Piyyuuu-Store/issues).
+2. Create a detailed issue including:
+   - A clear title.
+   - Steps to reproduce the bug.
+   - Expected and actual behavior.
+   - Screenshots or logs, if applicable.
+
+### Suggesting Enhancements
+
+To suggest an enhancement:
+
+1. Ensure your suggestion isn't already discussed by checking the [issues list](https://github.com/kibieptr/Piyyuuu-Store/issues).
+2. Create an issue including:
+   - A clear title.
+   - Detailed description of the enhancement.
+   - Any relevant use cases.
 
 ### Submitting Pull Requests
 
-1. **Fork the repository**: Click the "Fork" button at the top right of the repository page to create a copy of the repository on your GitHub account.
-
-2. **Clone your fork**:
-
+1. **Fork the repository**:
    ```bash
-   git clone https://github.com/your-username/Piyyuu-Store.git
-   cd Piyyuu-Store
+   git clone https://github.com/kibieptr/Piyyuuu-Store.git
+   cd Piyyuuu-Store
    ```
+````
 
-3. **Create a new branch**: Create a new branch for your work.
+2. **Create a new branch**:
 
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-4. **Make your changes**: Implement your feature or fix the bug.
+3. **Make your changes**:
 
-5. **Commit your changes**: Follow the [commit message guidelines](#commit-messages).
+   - Ensure your code follows the [style guides](#style-guides).
+   - Add tests for any new functionality.
+   - Ensure all tests pass.
+
+4. **Commit your changes**:
 
    ```bash
-   git add .
-   git commit -m "feat: add new feature"
+   git commit -m "Add feature: your feature description"
    ```
 
-6. **Push to your fork**:
+5. **Push to your fork**:
 
    ```bash
    git push origin feature/your-feature-name
    ```
 
-7. **Open a pull request**: Go to the original repository and open a pull request. Provide a clear and descriptive title and description of your changes.
+6. **Open a pull request**:
+   - Go to the repository on GitHub and click "Compare & pull request".
+   - Provide a clear description of your changes.
 
 ## Style Guides
 
-### Code Style
+### Git Commit Messages
 
-- Follow the coding style of the existing codebase.
-- Use [Prettier](https://prettier.io/) for code formatting.
+- Use the present tense ("Add feature" not "Added feature").
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+- Limit the first line to 72 characters or less.
+- Reference issues and pull requests liberally after the first line.
 
-### Commit Messages
+### JavaScript/TypeScript Style Guide
 
-- Use clear and descriptive commit messages.
-- Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) guidelines.
+- Follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+- Use TypeScript for type safety.
+- Always use `const` or `let` to declare variables.
+- Use arrow functions for anonymous functions.
 
-Examples:
+### CSS/SCSS Style Guide
+
+- Follow the [Sass Guidelines](https://sass-guidelin.es/).
+- Use BEM (Block Element Modifier) naming convention.
+- Use SCSS for styles.
+- Organize styles in a modular way.
+
+## Additional Notes
+
+### Issue and Pull Request Labels
+
+We use labels to organize and identify issues and pull requests. Here are some of the labels you might see:
+
+- `bug` - Something isn't working.
+- `documentation` - Improvements or additions to documentation.
+- `enhancement` - New feature or request.
+- `good first issue` - Good for newcomers.
+- `help wanted` - Extra attention is needed.
+- `question` - Further information is requested.
+
+Thank you for contributing to Piyyuu-Store!
 
 ```
-fix: resolve issue with user login
-feat: add search functionality
-docs: update README with installation instructions
+
+Feel free to adjust further if needed!
 ```
-
-## License
-
-By contributing to Piyyuu-Store, you agree that your contributions will be licensed under the MIT License.
-
-## Thank You!
-
-Thank you for considering contributing to Piyyuu-Store! Your efforts and contributions are greatly appreciated.
-
----
-
-Feel free to customize this template to better fit your project and contribution guidelines.
